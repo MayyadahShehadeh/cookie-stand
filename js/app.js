@@ -90,8 +90,10 @@ function randomNumberOfCustomers(min, max) {
     Rows1.appendChild(lastTd);
     lastTd.textContent = this.dailyLocationTotal;
     
+    
      }
 
+     
 
 
 

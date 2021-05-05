@@ -149,3 +149,38 @@ for (let i = 0; i < locations.length; i++) {
       tableFooter();    
     
     console.log(locations);
+
+// ---------------------------------------------- form --------------------------------------
+
+let cookieForm=document.getElementById('cookieForm');
+cookieForm.addEventListener('submit', submitter);
+
+function submitter(event){
+event.preventDefault();
+
+let location=event.target.Location.value;
+console.log('location is:' + location);
+
+let MinCus=event.target.minCus.value;
+console.log('Minimum num of Customers is:' + MinCus , Number);
+
+let MaxCus=event.target.maxCus.value;
+console.log('Maximum num of Customer is:' + MaxCus, Number);
+
+let AvgCookie=event.target.avgCookies.value;
+console.log('Avg Cookies is:' + AvgCookie, Number);
+
+
+
+let addDataToCookiesShop = new (location,MinCus,MaxCus,AvgCookie);
+
+addDataToCookiesShop.customersPerHour();
+addDataToCookiesShop.cookiesEachHour();
+addDataToCookiesShop.render();
+
+
+
+}
+
+
+

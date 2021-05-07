@@ -158,6 +158,8 @@ cookieForm.addEventListener('submit', submitter);
 function submitter(event){
 event.preventDefault();
 
+table.deleteRow(table.rows.length - 1);
+
 let location=event.target.Location.value;
 console.log('location is:' + location);
 
@@ -170,14 +172,15 @@ console.log('Maximum num of Customer is:' + MaxCus, Number);
 let AvgCookie=event.target.avgCookies.value;
 console.log('Avg Cookies is:' + AvgCookie, Number);
 
+document.getElementById('cookieForm').reset();
 
-
-let addDataToCookiesShop = new (location,MinCus,MaxCus,AvgCookie);
+let addDataToCookiesShop = new SalmonCookies (location,MinCus,MaxCus,AvgCookie);
 
 addDataToCookiesShop.customersPerHour();
 addDataToCookiesShop.cookiesEachHour();
 addDataToCookiesShop.render();
 
+tableFooter();    
 
 
 }

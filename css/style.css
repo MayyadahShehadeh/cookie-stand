@@ -51,7 +51,8 @@ footer{
 
     table{
         border: solid 1px grey;
-    
+margin: auto;
+font-size: 20px;    
     }
     table tr th{
         border: solid 1px black;
@@ -60,6 +61,7 @@ footer{
     table tr td{
         border: solid 1px black;
         width:  60px;
+        padding: 10px;
     }
     legend{
         font-size:30px ;
@@ -67,6 +69,7 @@ footer{
     form {
         font-weight: bold;
         font-size: 22px;
+        margin: 10px;
     }
     #submit{ 
         padding-left: 45px;
@@ -77,4 +80,12 @@ font-weight: bold;
 font-size: 16px;
 background-color: rgb(184, 180, 180);
 
+    }
+    #parent{
+        text-align: center;
+    }
+    #footer{
+        font-weight: bold; 
+    font-size: 28px;
+    
     }
